@@ -1,28 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React, { Fragment } from "react";
 import Header from "./Components/Landingpage/Header/Header";
-import ImageSlogan from "./Components/Landingpage/Imageslogan/Imageslogan";
-import OurMission from "./Components/Landingpage/OurMission/OurMission";
-import Sponsornow from "./Components/Landingpage/Sponsornow/Sponsornow";
-import OurImpact from "./Components/Landingpage/OurImpact/OurImpact";
-import WriteLetter from "./Components/Landingpage/writeLetter/WriteLetter";
-import HowHelp from "./Components/Landingpage/HowHelp/HowHelp";
-import OurBlog from "./Components/Landingpage/OurBlog/OurBlog";
-import Footercontent from "./Components/Footer/Footer";
-
+import Homepage from "../src/Components/Landingpage/Homepage";
+import Sponsormainpage from "./Components/SponsorPage/Sponsormainpage";
+import Aboutus from "./Components/AboutUs/AboutUs";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <ImageSlogan />
-      <OurMission />
-      <Sponsornow />
-      <OurImpact />
-      <WriteLetter />
-      <HowHelp />
-      <OurBlog />
-      <Footercontent />
+      <Router>
+        <Fragment>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Homepage} />
+            <Route path="/about-us" exact component={Aboutus} />
+            <Route path="/sponsor-now" exact component={Sponsormainpage} />
+          </Switch>
+        </Fragment>
+      </Router>
     </div>
   );
 }

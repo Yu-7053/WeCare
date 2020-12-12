@@ -94,7 +94,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 310;
+      const show = window.scrollY > 0;
       if (show) {
         setNavBackground("appBarsolid");
       } else {
@@ -109,7 +109,11 @@ export default function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" className={classes[navRef.current]} style={{height:75}}>
+      <AppBar
+        position="fixed"
+        className={classes[navRef.current]}
+        style={{ height: 75, width: "100%" }}
+      >
         <Toolbar>
           <Button style={{ fontSize: 30, fontWeight: "bold", color: "white" }}>
             WeCare
@@ -117,7 +121,7 @@ export default function Header() {
 
           <Typography variant="h6" className={classes.title}>
             <Link
-              href="#"
+              href="/about-us"
               onClick={testClick}
               className={classes.menuItem}
               style={{ marginLeft: "70%" }}
@@ -125,7 +129,6 @@ export default function Header() {
               About Us
             </Link>
             <Link
-              href="#"
               ref={anchorRef}
               aria-controls={open ? "menu-list-grow" : undefined}
               aria-haspopup="true"
@@ -156,10 +159,22 @@ export default function Header() {
                         id="menu-list-grow"
                         onKeyDown={handleListKeyDown}
                       >
-                        <MenuItem onClick={handleClose}>Donate</MenuItem>
-                        <MenuItem onClick={handleClose}>
-                          Sponsor a Child
-                        </MenuItem>
+                        <Link
+                          href="/about-us"
+                          style={{ textDecoration: "none", color: "black" }}
+                        >
+                          <MenuItem onClick={handleClose}>Donate</MenuItem>
+                        </Link>
+
+                        <Link
+                          href="/sponsor-now"
+                          style={{ textDecoration: "none", color: "black" }}
+                        >
+                          <MenuItem onClick={handleClose}>
+                            Sponsor a Child
+                          </MenuItem>
+                        </Link>
+
                         <MenuItem onClick={handleClose}>Volunteer</MenuItem>
                       </MenuList>
                     </ClickAwayListener>
@@ -167,7 +182,7 @@ export default function Header() {
                 </Grow>
               )}
             </Popper>
-            <Link href="#" onClick={blogClick} className={classes.menuItem}>
+            <Link href="/Blog" className={classes.menuItem}>
               Blog
             </Link>
           </Typography>
