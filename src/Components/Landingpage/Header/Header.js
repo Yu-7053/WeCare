@@ -115,9 +115,13 @@ export default function Header() {
         style={{ height: 75, width: "100%" }}
       >
         <Toolbar>
+        <Link
+              href="/"
+            >
           <Button style={{ fontSize: 30, fontWeight: "bold", color: "white" }}>
             WeCare
           </Button>
+          </Link>
 
           <Typography variant="h6" className={classes.title}>
             <Link

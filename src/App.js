@@ -5,11 +5,15 @@ import Homepage from "../src/Components/Landingpage/Homepage";
 import Sponsormainpage from "./Components/SponsorPage/Sponsormainpage";
 import Aboutus from "./Components/AboutUs/AboutUs";
 import DonateNow from "./Components/DonateNow/DonateNow";
+import Footer from "./Components/Footer/Footer";
+import WriteCard from "./Components/WriteCard/WriteCard"
+import WriteContent from "./Components/WriteCard/WriteContent/WriteContent"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+
       <Router>
         <Fragment>
           <Header />
@@ -18,9 +22,15 @@ function App() {
             <Route path="/about-us" exact component={Aboutus} />
             <Route path="/sponsor-now" exact component={Sponsormainpage} />
             <Route path="/donate-now" exact component={DonateNow} />
+            <Route path="/write-card-now" exact component={WriteCard} />
+            <Route path="/write-content" exact component={WriteContent} />
+
+
           </Switch>
+         
         </Fragment>
       </Router>
+      <Footer />
     </div>
   );
 }

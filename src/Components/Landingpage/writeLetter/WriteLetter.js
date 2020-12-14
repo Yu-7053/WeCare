@@ -7,6 +7,8 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
+import Link from "@material-ui/core/Link";
+
 
 
  
@@ -72,9 +74,12 @@ through letters.
           <div className={classes.paper}>
             <p id="transition-modal-description">This fuction is only for those who have sponsored the child</p>
             <Button style={{marginLeft:150, color:"gray"}} onClick={handleClose}>Maybe Later</Button>
+            <Link href="/write-card-now"
+            style={{ textDecoration: "none", color: "white" }}>
             <Button style={{marginLeft:10}} variant="contained" color="primary">
                 Sure, Let's Start
             </Button>
+            </Link>
           </div>
         </Fade>
       </Modal>
