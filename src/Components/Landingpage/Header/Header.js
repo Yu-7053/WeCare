@@ -186,9 +186,14 @@ export default function Header() {
               Blog
             </Link>
           </Typography>
-          <Fab color="inherit" fontWeight="Bold" variant="extended">
-            Donate
-          </Fab>
+          <Link
+            href="/donate-now"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <Fab color="inherit" fontWeight="Bold" variant="extended">
+              Donate
+            </Fab>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
