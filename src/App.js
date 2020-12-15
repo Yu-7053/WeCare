@@ -9,6 +9,7 @@ import Footer from "./Components/Footer/Footer";
 import WriteCard from "./Components/WriteCard/WriteCard"
 import WriteContent from "./Components/WriteCard/WriteContent/WriteContent"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Test from "./Components/test";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
             <Route path="/donate-now" exact component={DonateNow} />
             <Route path="/write-card-now" exact component={WriteCard} />
             <Route path="/write-content" exact component={WriteContent} />
+            <Route path="/test" exact component={Test} />
+
 
 
           </Switch>

@@ -186,7 +186,7 @@ export default function Header() {
                 </Grow>
               )}
             </Popper>
-            <Link href="/Blog" className={classes.menuItem}>
+            <Link href="/Test" className={classes.menuItem}>
               Blog
             </Link>
           </Typography>
