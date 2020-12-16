@@ -1,48 +1,56 @@
 import React from "react";
 import "./Footer.css";
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 
 function Footer() {
   return (
-    <div className="main-footer" style={{marginTop:"2%"}}>
-      <div className="container">
-        <div className="row">
-          {/* Column1 */}
-          <div className="col">
-            <h4>THICC MEMES INC</h4>
-            <h1 className="list-unstyled">
-              <li>342-420-6969</li>
-              <li>Moscow, Russia</li>
-              <li>123 Streeet South North</li>
-            </h1>
-          </div>
-          {/* Column2 */}
-          <div className="col">
-            <h4>Stuff</h4>
-            <ui className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
-            </ui>
-          </div>
-          {/* Column3 */}
-          <div className="col">
-            <h4>WELL ANOTHER COLUMN</h4>
-            <ui className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
-            </ui>
-          </div>
-        </div>
-        <hr />
-        <div className="row">
+    <Paper style={{height:"auto", width:"auto"}}>
+        <Grid container direction="row"
+        justify="center"
+        alignItems="center" style={{height:500 }}>
+        
+          <Grid item xs={4}>
+            <h2 style ={{textDecorationLine:"underline"}}>Learn More</h2>
+            <span>About Us</span>
+            <br></br>
+            <span>Donate</span>
+            <br></br>
+            <span>Sponsor a Child</span>
+            <br></br>
+            <span>Blog</span>
+
+          </Grid>
+          <Grid item xs={4}>
+          <h2 style ={{textDecorationLine:"underline"}}>Contact</h2>
+            <span>Contact</span>
+            <br></br>
+            <span>Address</span>
+            <br></br>
+            <span>Phone</span>
+            <br></br>
+            <span>Email</span>
+          </Grid>
+          <Grid item xs={4}>
+          <h2 style ={{textDecorationLine:"underline"}}>Connect With Us</h2>
+            <span>Contact</span>
+            <br></br>
+            <span>Address</span>
+            <br></br>
+            <span>Phone</span>
+            <br></br>
+            <span>Email</span>
+          </Grid>
+          
           <p className="col-sm">
             &copy;{new Date().getFullYear()} THICC MEMES | All rights reserved |
             Terms Of Service | Privacy
           </p>
-        </div>
-      </div>
-    </div>
+        </Grid>
+        </Paper>
+         
+        
+  
   );
 }
 

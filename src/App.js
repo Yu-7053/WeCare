@@ -10,8 +10,11 @@ import WriteCard from "./Components/WriteCard/WriteCard"
 import WriteContent from "./Components/WriteCard/WriteContent/WriteContent"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Components/test";
+import ThankYou from "./Components/ThankYou/ThankYou"
+import SponsorPayment from "./Components/SponsorPage/SponsorPayment/SponsorPayment"
 
 function App() {
+
   return (
     <div className="App">
 
@@ -26,6 +29,10 @@ function App() {
             <Route path="/write-card-now" exact component={WriteCard} />
             <Route path="/write-content" exact component={WriteContent} />
             <Route path="/test" exact component={Test} />
+            <Route path="/sponsor-payment" exact component={SponsorPayment} />
+            <Route path="/thank-you" exact component={ThankYou} />
+
+
 
 
 

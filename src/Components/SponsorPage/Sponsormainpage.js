@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import SponsorHeaderImage from "./SponsorHeaderImage/SponsorHeaderImage";
 import SponsorText from "./SponsorText/SponsorText";
-import SponsorCards from "./SponsorCards/SponsorCards";
+import SponsorCards from "./SponsorCards/SponsorCarrdsNew";
 
 export const Sponsormainpage = () => {
 

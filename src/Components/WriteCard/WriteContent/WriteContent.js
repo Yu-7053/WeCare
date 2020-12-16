@@ -253,7 +253,7 @@ function WriteContent() {
               className={buttonClassname}
               onClick={handleButtonClick}
             >
-              {success ?  <Link href="/"
+              {success ?  <Link href="/thank-you"
             style={{ textDecoration: "none",color:"black"}}> Back to Home </Link> : "Send"}
             </Fab>
             {loading && (
