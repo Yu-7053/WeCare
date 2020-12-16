@@ -12,7 +12,7 @@ export default function OurMission() {
         <p
           style={{
             fontWeight: "bold",
-            fontSize: 35,
+            fontSize: 28,
             marginTop: 0,
             textDecorationLine: "underline",
             textDecorationColor: "#035AA6",
@@ -20,7 +20,15 @@ export default function OurMission() {
         >
           Our Mission
         </p>
-        <span style={{ fontSize: 28, color: "#696161", fontStyle: "italic" }}>
+        <span
+          style={{
+            fontSize: 20,
+            color: "#696161",
+            fontStyle: "italic",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           We connect with the people around the world in the fight to end
           poverty. Working together, we invest in the lives of children,
           building healthy environments they need to thrive, and empower them to

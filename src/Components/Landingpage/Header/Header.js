@@ -115,12 +115,12 @@ export default function Header() {
         style={{ height: 75, width: "100%" }}
       >
         <Toolbar>
-        <Link
-              href="/"
+          <Link href="/">
+            <Button
+              style={{ fontSize: 30, fontWeight: "bold", color: "white" }}
             >
-          <Button style={{ fontSize: 30, fontWeight: "bold", color: "white" }}>
-            WeCare
-          </Button>
+              WeCare
+            </Button>
           </Link>
 
           <Typography variant="h6" className={classes.title}>
@@ -128,7 +128,7 @@ export default function Header() {
               href="/about-us"
               onClick={testClick}
               className={classes.menuItem}
-              style={{ marginLeft: "70%" }}
+              style={{ marginLeft: "70%", fontWeight: "bold" }}
             >
               About Us
             </Link>
@@ -138,6 +138,7 @@ export default function Header() {
               aria-haspopup="true"
               onClick={handleToggle}
               className={classes.menuItem}
+              style={{ fontWeight: "bold" }}
             >
               Get Involved
             </Link>
@@ -186,7 +187,11 @@ export default function Header() {
                 </Grow>
               )}
             </Popper>
-            <Link href="/Test" className={classes.menuItem}>
+            <Link
+              href="/Test"
+              className={classes.menuItem}
+              style={{ fontWeight: "bold" }}
+            >
               Blog
             </Link>
           </Typography>

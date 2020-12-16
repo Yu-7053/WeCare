@@ -8,9 +8,13 @@ import SloganImage from "../../../Images/LandingPageImage.jpg";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    "& .MuiFab-root": {
-      fontColor:"White",
+    "&  .MuiFab-root": {
+      fontColor: "White",
+      fontWeight: "bolder",
       backgroundColor: "rgb(3,90,166)",
+      width: 300,
+      border: "solid 2px",
+      fontSize: "20px",
     },
   },
   paper: {
@@ -50,17 +54,18 @@ export default function Imageslogan() {
         className="slogan"
         style={{
           fontSize: 60,
-          marginLeft: 900,
-          height: "30%",
+          marginLeft: 850,
+          height: "10%",
+          fontWeight: "bold",
           color: "rgb(248,244,244)",
           fontStyle: "italic",
         }}
       >
         "Every childhood is worth fighting for"
+        <Fab variant="extended" style={{ marginLeft: "10%", color: "White" }}>
+          Donate Now
+        </Fab>
       </Grid>
-      <Fab  variant="extended" style={{ marginLeft: "60%", color:"White"}}>
-        Donate
-      </Fab>
     </div>
   );
 }
