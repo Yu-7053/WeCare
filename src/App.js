@@ -6,21 +6,18 @@ import Sponsormainpage from "./Components/SponsorPage/Sponsormainpage";
 import Aboutus from "./Components/AboutUs/AboutUs";
 import DonateNow from "./Components/DonateNow/DonateNow";
 import Footer from "./Components/Footer/Footer";
-import WriteCard from "./Components/WriteCard/WriteCard"
-import WriteContent from "./Components/WriteCard/WriteContent/WriteContent"
+import WriteCard from "./Components/WriteCard/WriteCard";
+import WriteContent from "./Components/WriteCard/WriteContent/WriteContent";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Components/test";
-import ThankYou from "./Components/ThankYou/ThankYou"
-import SponsorPayment from "./Components/SponsorPage/SponsorPayment/SponsorPayment"
+import ThankYou from "./Components/ThankYou/ThankYou";
+import SponsorPayment from "./Components/SponsorPage/SponsorPayment/SponsorPayment";
 
 function App() {
-
   return (
     <div className="App">
-
       <Router>
         <Fragment>
-          <Header />
           <Switch>
             <Route path="/" exact component={Homepage} />
             <Route path="/about-us" exact component={Aboutus} />
@@ -31,13 +28,7 @@ function App() {
             <Route path="/test" exact component={Test} />
             <Route path="/sponsor-payment" exact component={SponsorPayment} />
             <Route path="/thank-you" exact component={ThankYou} />
-
-
-
-
-
           </Switch>
-         
         </Fragment>
       </Router>
       <Footer />

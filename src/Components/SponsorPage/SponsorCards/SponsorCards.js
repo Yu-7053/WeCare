@@ -47,8 +47,6 @@ export default function AltCard(props) {
     setOpen(false);
   };
 
-  
-
   const [kids, setKids] = React.useState([
     {
       name: "Melvin Ortencia",
@@ -167,9 +165,9 @@ export default function AltCard(props) {
       FamilyIncome: 134,
       Country: "Nicaragua",
     },
-  ])
+  ]);
 
-  const [sponsorKid, setSponsorKid] = React.useState([])
+  const [sponsorKid, setSponsorKid] = React.useState([]);
 
   const kidsData = {
     details: [
@@ -374,8 +372,6 @@ export default function AltCard(props) {
     setCountryData(event.target.value);
   };
 
- 
-
   const [kidData, setkidData] = React.useState(
     {
       name: "Melvin Ortencia",
@@ -500,12 +496,9 @@ export default function AltCard(props) {
   const [CountryData, setCountryData] = React.useState("");
   const [MonthData, setMonthData] = React.useState("");
 
-  const testClick = (name,image, age) => {props.setSponsorKid(
-   name,
-   image,
-   age
-  )}
-    
+  const testClick = (name, image, age) => {
+    props.setSponsorKid(name, image, age);
+  };
 
   return (
     <div className={classes.root}>
@@ -515,8 +508,9 @@ export default function AltCard(props) {
         direction="row"
         justify="flex-start"
         alignItems="flex-start"
+        marginTop="100"
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{ marginTop: "100" }}>
           <Paper variant="outlined">
             <TextField
               id="standard-select-currency"

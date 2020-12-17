@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 100,
   },
 });
 
@@ -21,7 +21,7 @@ export default function OurVolunteers() {
 
   return (
     <div>
-      <Grid xs={12} style={{ marginLeft: 80, marginRight: 80 }}>
+      <Grid xs={12} style={{ marginLeft: 80, marginRight: 80, marginTop: 40 }}>
         <br></br>
         <br></br>
 
@@ -29,7 +29,7 @@ export default function OurVolunteers() {
           style={{
             fontWeight: "bold",
             fontSize: 28,
-            marginTop: 0,
+            marginTop: 100,
             color: "black",
           }}
         >
@@ -115,8 +115,8 @@ export default function OurVolunteers() {
           backgroundImage: `url(${FullOfKids})`,
           backgroundColor: "Black",
           height: 100,
-          marginTop: "30%",
-          marginBottom: "10%",
+          marginTop: "10%",
+          marginBottom: "-5%",
         }}
       ></Grid>
     </div>

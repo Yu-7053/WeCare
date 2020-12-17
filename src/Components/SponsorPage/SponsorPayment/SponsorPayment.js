@@ -18,7 +18,11 @@ import Typography from "@material-ui/core/Typography";
 import Checkbox from "@material-ui/core/Checkbox";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Link from "@material-ui/core/Link";
+import SolidHeader from "../../SolidHeader";
 import { green } from "@material-ui/core/colors";
+import InfoIcon from "@material-ui/icons/Info";
+import IconButton from "@material-ui/core/IconButton";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -111,12 +115,12 @@ export default function SponsorPayment() {
   const [price, setPrice] = React.useState("");
   const [success1, setSuccess1] = React.useState(false);
   const [success2, setSuccess2] = React.useState(false);
-  const [checked, setChecked] =React.useState(false);
+  const [checked, setChecked] = React.useState(false);
 
   const checkedChange = () => {
-      setChecked(!checked)
-      console.log(checked)
-  }
+    setChecked(!checked);
+    console.log(checked);
+  };
 
   const selectDurationClick1 = () => {
     setSuccess1(true);
@@ -137,8 +141,15 @@ export default function SponsorPayment() {
   };
   return (
     <div className={classes.root} style={{ marginTop: "3%" }}>
+      <SolidHeader />
+
       <Card
-        style={{ width: 1000, height: 300, marginLeft: "15%", marginTop: "5%" }}
+        style={{
+          width: 1000,
+          height: 300,
+          marginRight: "15%",
+          marginTop: "5%",
+        }}
       >
         <Grid
           item
@@ -162,16 +173,17 @@ export default function SponsorPayment() {
             <CardContent>
               <Typography
                 gutterBottom
-                variant="h4"
-                component="h2"
-                style={{ fontWeight: "bold", textDecorationLine: "underline" }}
+                style={{
+                  fontWeight: "bold",
+                  textDecorationLine: "underline",
+                  fontSize: "28px",
+                }}
               >
                 Details
               </Typography>
               <Typography
-                variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Melvin Ortencia
@@ -197,7 +209,6 @@ export default function SponsorPayment() {
           </Grid>
         </Grid>
       </Card>
-
       <Grid
         item
         xs={12}
@@ -215,29 +226,44 @@ export default function SponsorPayment() {
             style={{
               fontSize: 28,
               textDecorationLine: "underline",
-              marginRight: "70%",
+              marginRight: "20%",
             }}
           >
             Select Duration
+            <Tooltip
+              title="Donate Monthly implies a recurring monthly payment. To cancel please inform us via email or contact us at 1-800-888-3089
+"
+              style={{ marginRight: "40%", marginButtom: "-10%" }}
+            >
+              <IconButton aria-label="delete">
+                <InfoIcon />
+              </IconButton>
+            </Tooltip>
           </span>
           <br></br>
           <br></br>
           <br></br>
-          <span style={{ fontSize: 20, marginRight: "70%" }}>
+          <span style={{ fontSize: 30, marginRight: "65%" }}>
             Amount : 25 $
           </span>
           <ButtonGroup
             variant="contained"
-            style={{ marginTop: "3%", marginRight: "70%" }}
+            style={{ marginTop: "3%", marginRight: "45%" }}
           >
             <Button
               onClick={selectDurationClick1}
               color={success1 ? "primary" : ""}
+              style={{ width: 200 }}
             >
-              one
+              Donate Once
             </Button>
-            <Button onClick={selectDurationClick2}
-              color={success2 ? "primary" : ""}>Two</Button>
+            <Button
+              onClick={selectDurationClick2}
+              color={success2 ? "primary" : ""}
+              style={{ width: 200 }}
+            >
+              Donate Monthly
+            </Button>
           </ButtonGroup>
           <br></br> <br></br>
           <span
@@ -442,32 +468,38 @@ export default function SponsorPayment() {
             alignItems="center"
             style={{ marginTop: "5%", marginLeft: "3%" }}
           >
-            <StyledCheckbox onChange={checkedChange}/>
+            <StyledCheckbox onChange={checkedChange} />
 
-            <span style={{ fontSize: 25, marginRight: 450 }}>
+            <span style={{ fontSize: 20, marginRight: 450 }}>
               Write a card to your sponsor kid
             </span>
           </Grid>
           <Grid container>
             <Grid item xs={12} style={{ marginTop: "3%", marginRight: "55%" }}>
-              <span style={{ fontSize: 25 }}> Total Amount : € 7468</span>
+              <span style={{ fontSize: 22 }}>
+                {" "}
+                Total Amount : € 25 &nbsp;{" "}
+                {success2 ? (
+                  <span style={{ fontSize: 22 }}> per Month</span>
+                ) : null}
+              </span>
             </Grid>
           </Grid>
-          <Link href={checked ?  '/write-card-now':  '/thank-you'}>
-          <Button
-            style={{
-              marginTop: "5%",
-              width: 400,
-              height: 50,
-              fontWeight: "bold",
-              fontSize: 17,
-              marginBottom: "3%",
-            }}
-            variant="contained"
-            color="primary"
-          >
-            Donate Now
-          </Button>
+          <Link href={checked ? "/write-card-now" : "/thank-you"}>
+            <Button
+              style={{
+                marginTop: "5%",
+                width: 400,
+                height: 50,
+                fontWeight: "bold",
+                fontSize: 17,
+                marginBottom: "3%",
+              }}
+              variant="contained"
+              color="primary"
+            >
+              Donate Now
+            </Button>
           </Link>
         </Paper>
       </Grid>

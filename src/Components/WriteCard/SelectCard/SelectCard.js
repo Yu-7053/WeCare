@@ -12,10 +12,22 @@ import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import Fab from "@material-ui/core/Fab";
 import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    "& .MuiFab-root": {
+      backgroundColor: "rgb(3,90,166)",
+      color: "white",
+    },
+  },
+}));
 
 export default function SelectCard() {
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.root}>
       <Grid container style={{ height: 600 }}>
         <Grid item xs={12} style={{ marginTop: "8%" }}>
           <span style={{ fontSize: 30 }}>Select a Card</span>

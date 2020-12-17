@@ -12,19 +12,19 @@ export default function SponsorText() {
         <h1
           style={{
             fontWeight: "bold",
-            fontSize: 35,
+            fontSize: 28,
             marginTop: 0,
             color: "black",
           }}
         >
           Meet children waiting for a sponsor
         </h1>
-        <p style={{ fontsize: 30 }}>
+        <p style={{ fontsize: 25 }}>
           <i>How to</i> SPONSOR A CHILD IN NEED
         </p>
 
         <br></br>
-        <span style={{ fontSize: 25 }}>
+        <span style={{ fontSize: 20 }}>
           In the times of crisis, children suffering from poverty are the ones
           most affected and face uncertain futures. Your monthly gift of 25€
           will help your sponsored child in gaining access to benefits like

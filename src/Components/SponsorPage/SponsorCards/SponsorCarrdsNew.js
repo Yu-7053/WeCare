@@ -10,17 +10,25 @@ import {
   TextField,
   MenuItem,
   Paper,
-  Link
+  Link,
 } from "@material-ui/core/";
 import Pagination from "@material-ui/lab/Pagination";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import InfoIcon from "@material-ui/icons/Info";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(2),
+    "& .MuiButton-containedPrimary": {
+      backgroundColor: "rgb(3, 90, 166)",
+    },
+    "& .MuiIconButton-root": {
+      color: "#035AA6",
+    },
   },
   modal: {
     display: "flex",
@@ -47,7 +55,6 @@ export default function SponsorCards(props) {
   const [open6, setOpen6] = React.useState(false);
   const [open7, setOpen7] = React.useState(false);
   const [open8, setOpen8] = React.useState(false);
-
 
   const handleOpen = () => {
     setOpen(true);
@@ -120,8 +127,6 @@ export default function SponsorCards(props) {
   const handleClose8 = () => {
     setOpen8(false);
   };
-
-  
 
   const kidsData = {
     details: [
@@ -334,9 +339,10 @@ export default function SponsorCards(props) {
         direction="row"
         justify="flex-start"
         alignItems="flex-start"
+        marginTop="100"
       >
         <Grid item xs={12}>
-          <Paper variant="outlined">
+          <Paper variant="outlined" style={{ marginTop: 50, marginBottom: 80 }}>
             <TextField
               id="standard-select-currency"
               select
@@ -405,7 +411,7 @@ export default function SponsorCards(props) {
               color="primary"
               style={{ marginLeft: "3%", marginBottom: "1%" }}
             >
-              Primary
+              Search
             </Button>
           </Paper>
         </Grid>
@@ -415,20 +421,25 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/boy4.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
               onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Melvin Ortencia
@@ -451,14 +462,14 @@ export default function SponsorCards(props) {
                 </span>
               </Typography>
             </CardContent>
-            <Link  href="/sponsor-payment">
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ fontWeight: "bold", marginBottom: "5%", width: "60%" }}
-            >
-              SPONSOR NOW
-            </Button>
+            <Link href="/sponsor-payment">
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ fontWeight: "bold", marginBottom: "5%", width: "60%" }}
+              >
+                SPONSOR NOW
+              </Button>
             </Link>
           </Card>
         </Grid>
@@ -468,20 +479,25 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/boy2.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen1}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Edson Ayubu
@@ -518,21 +534,25 @@ export default function SponsorCards(props) {
         <Grid item xs={4}>
           <Card>
             <CardMedia component="img" height="250" image="./Child/boy3.jpg" />
-
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen2}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Austin Malaski
@@ -570,20 +590,25 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/boy1.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen3}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Eki Nolava
@@ -621,20 +646,24 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/girl1.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen4}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
-
+              <InfoIcon />
+              Info
+            </IconButton>
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Souraya Paracana
@@ -672,20 +701,25 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/girl3.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen5}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Harira Sapuna
@@ -723,20 +757,25 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/girl2.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen6}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Kabita Bhattarai
@@ -774,20 +813,24 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/boy5.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen7}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
-
+              <InfoIcon />
+              Info
+            </IconButton>
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Albert Lare
@@ -825,20 +868,25 @@ export default function SponsorCards(props) {
           <Card>
             <CardMedia component="img" height="250" image="./Child/girl4.jpg" />
 
-            <Button
-              variant="contained"
+            <IconButton
               color="primary"
-              style={{ opacity: 0.3, marginRight: "60%" }}
-              onClick={handleOpen8}
+              style={{
+                marginRight: "80%",
+                height: "20px",
+                width: "30px",
+                fontSize: "20px",
+              }}
+              onClick={handleOpen}
             >
-              + Details
-            </Button>
+              <InfoIcon />
+              Info
+            </IconButton>
 
             <CardContent>
               <Typography
                 variant="h5"
                 gutterBottom
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
                   <b>Name</b> : Kyara Lopez
@@ -878,12 +926,13 @@ export default function SponsorCards(props) {
           direction="row"
           justify="center"
           alignItems="center"
+          style={{ marginTop: 40 }}
         >
           <Pagination count={10} style={{ alignContent: "center" }} />
         </Grid>
       </Grid>
 
-{/* Kid 1*/ }
+      {/* Kid 1*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -914,37 +963,37 @@ export default function SponsorCards(props) {
                 </h2>
 
                 <p id="transition-modal-description">
-                <span>
-                  <b>Name</b> : Melvin Ortencia
-                </span>
-                <br></br>
-                <span>
-                  <b>Age</b> : 5
-                </span>
-                <br></br>
-                <span>
-                  <b>Waiting For Sponsorship</b> : 30 days
-                </span>
-                <br></br>
-                <span>
-                  <b>Country</b> : Guatemala
-                </span>
-                <br></br>
-                <span>
-                  <b>Family Income</b> : 156 €
-                </span>
-                <br></br>
-                <span>
-                  <b>Gender</b> : Male
-                </span>
-                <br></br>
-                <span>
-                  <b>Enjoys</b> : Running, playing with dolls
-                </span>
-                <br></br>
-                <span>
-                  <b>Talents</b> : Singing
-                </span>
+                  <span>
+                    <b>Name</b> : Melvin Ortencia
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 5
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 30 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Guatemala
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 156 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Male
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Running, playing with dolls
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Singing
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -952,7 +1001,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-{/* Kid 2*/ }
+      {/* Kid 2*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -990,7 +1039,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 3*/ }
+      {/* Kid 3*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -1028,7 +1077,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 4*/ }
+      {/* Kid 4*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -1044,7 +1093,7 @@ export default function SponsorCards(props) {
         <Fade in={open3} style={{ width: "80%", height: "50%" }}>
           <div className={classes.paper}>
             <Grid container spacing={3}>
-              <Grid item xs={6} style={{height:400}}>
+              <Grid item xs={6} style={{ height: 400 }}>
                 <img
                   src="./Child/boy1.jpg"
                   style={{ width: "100%", height: "100%" }}
@@ -1066,7 +1115,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 5*/ }
+      {/* Kid 5*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -1104,7 +1153,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 6*/ }
+      {/* Kid 6*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -1120,7 +1169,7 @@ export default function SponsorCards(props) {
         <Fade in={open5} style={{ width: "80%", height: "50%" }}>
           <div className={classes.paper}>
             <Grid container spacing={3}>
-              <Grid item xs={6} style={{height:400}}>
+              <Grid item xs={6} style={{ height: 400 }}>
                 <img
                   src="./Child/girl3.jpg"
                   style={{ width: "100%", height: "100%" }}
@@ -1142,7 +1191,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 7*/ }
+      {/* Kid 7*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -1180,7 +1229,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 8*/ }
+      {/* Kid 8*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -1218,7 +1267,7 @@ export default function SponsorCards(props) {
         </Fade>
       </Modal>
 
-      {/* Kid 9*/ }
+      {/* Kid 9*/}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

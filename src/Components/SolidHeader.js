@@ -7,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Fab from "@material-ui/core/Fab";
 import Link from "@material-ui/core/Link";
-import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -38,14 +37,14 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(3),
   },
   appBarTransparent: {
-    backgroundColor: "rgba(67, 129, 168, 0)",
+    backgroundColor: "#00bcd4",
   },
   appBarsolid: {
     backgroundColor: "#00bcd4",
   },
 }));
 
-export default function Header() {
+export default function SolidHeader() {
   const classes = useStyles();
   const [navBackground, setNavBackground] = useState("appBarTransparent");
   const [open, setOpen] = React.useState(false);

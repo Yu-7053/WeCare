@@ -28,7 +28,7 @@ export default function AboutUsText() {
           style={{
             fontWeight: "bold",
             fontSize: 28,
-            marginTop: 0,
+            marginTop: 30,
             color: "black",
           }}
         >
@@ -37,9 +37,9 @@ export default function AboutUsText() {
 
         <br></br>
         <span style={{ fontSize: 20 }}>
-          For the past 20 years we have been giving the children in the United
-          States and other parts of the world opportunities to learn, access to
-          healthcare, protection from harm and a healthy start to their lives.
+          For the past 20 years we have been giving the children in Europe and
+          other parts of the world opportunities to learn, access to healthcare,
+          protection from harm and a healthy start to their lives.
         </span>
       </Grid>
       <Grid container style={{ marginTop: "3%", marginLeft: "3%" }}>

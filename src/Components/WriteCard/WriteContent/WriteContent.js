@@ -1,5 +1,5 @@
-import React, {useCallback} from "react";
-import useScreenReader from 'react-screenreader';
+import React, { useCallback } from "react";
+import useScreenReader from "react-screenreader";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -12,7 +12,8 @@ import Info from "@material-ui/icons/Info";
 import clsx from "clsx";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { green } from "@material-ui/core/colors";
-import Link from "@material-ui/core/Link"
+import Link from "@material-ui/core/Link";
+import SolidHeader from "../../SolidHeader";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiButton-containedPrimary": {
       backgroundColor: "rgb(3, 90, 166)",
+    },
+    "& .MuiFab-root": {
+      backgroundColor: "rgb(3,90,166)",
+      color: "white",
+      fontWeight: "bold",
     },
   },
   formControl: {
@@ -129,7 +135,8 @@ function WriteContent() {
   };
 
   return (
-    <div className={classes.root} style={{ marginTop: "5%" }}>
+    <div className={classes.root} style={{ marginTop: "0.1%" }}>
+      <SolidHeader />
       <Grid
         item
         xs={12}
@@ -154,13 +161,13 @@ function WriteContent() {
           <form>
             <Grid container>
               <Grid item xs={3} style={{ marginTop: "9%" }}>
-                <span style={{ fontSize: 20 }}> Kid's Name</span>
+                <span style={{ fontSize: 20 }}> Enter child's name</span>
               </Grid>
               <Grid item xs={6} style={{ marginTop: "8%" }}>
                 <TextField
                   style={{ marginRight: 2, width: 420 }}
                   id="outlined-basic"
-                  label="Kid's Name"
+                  label="Child's Name"
                   variant="outlined"
                 />
               </Grid>
@@ -168,13 +175,13 @@ function WriteContent() {
 
             <Grid container>
               <Grid item xs={3} style={{ marginTop: "5%" }}>
-                <span style={{ fontSize: 20 }}> Kid's ID</span>
+                <span style={{ fontSize: 20 }}> Child ID</span>
               </Grid>
               <Grid item xs={6} style={{ marginTop: "3%" }}>
                 <TextField
                   style={{ marginRight: 2, width: 420 }}
                   id="outlined-basic"
-                  label="Kid's ID"
+                  label="Child ID"
                   variant="outlined"
                 />
               </Grid>
@@ -242,10 +249,7 @@ function WriteContent() {
               </Grid>
             </Grid>
           </form>
-          
-          
           <div className={classes.wrapper} style={{ marginTop: "2%" }}>
-          
             <Fab
               aria-label="save"
               color="primary"
@@ -253,19 +257,23 @@ function WriteContent() {
               className={buttonClassname}
               onClick={handleButtonClick}
             >
-              {success ?  <Link href="/thank-you"
-            style={{ textDecoration: "none",color:"black"}}> Back to Home </Link> : "Send"}
+              {success ? (
+                <Link
+                  href="/thank-you"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  {" "}
+                  Back to Home{" "}
+                </Link>
+              ) : (
+                "Send"
+              )}
             </Fab>
             {loading && (
               <CircularProgress size={24} className={classes.buttonProgress} />
             )}
-            
-           
-            
           </div>
-          
         </Paper>
-        
       </Grid>
     </div>
   );
