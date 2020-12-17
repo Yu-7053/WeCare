@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Radio from "@material-ui/core/Radio";
@@ -57,11 +57,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const HtmlTooltip = withStyles((theme) => ({
+  tooltip: {
+    backgroundColor: "#f5f5f9",
+    color: "rgba(0, 0, 0, 0.87)",
+    maxWidth: 500,
+    fontSize: "15px",
+    border: "1px solid #dadde9",
+  },
+}))(Tooltip);
+
 export default function DonatePayment() {
   const classes = useStyles();
   const [type, setType] = React.useState(0);
   const [price, setPrice] = React.useState("");
   const [selectedPrice, setSelectedPrice] = React.useState();
+  const [gender, setGender] = React.useState("");
 
   const [Monthly, setMonthly] = React.useState(false);
 
@@ -90,6 +101,7 @@ export default function DonatePayment() {
   return (
     <div className={classes.root} style={{ marginTop: "3%" }}>
       <Grid
+        aria-label="Payment form"
         item
         xs={12}
         container
@@ -110,15 +122,18 @@ export default function DonatePayment() {
             }}
           >
             Select the Amount
-            <Tooltip
+            <HtmlTooltip
               title="Donate Monthly implies a recurring monthly payment. To cancel please inform us via email or contact us at 1-800-888-3089
 "
-              style={{ marginRight: "40%", marginButtom: "-10%" }}
+              style={{
+                marginRight: "40%",
+                marginButtom: "-10%",
+              }}
             >
               <IconButton aria-label="delete">
                 <InfoIcon />
               </IconButton>
-            </Tooltip>
+            </HtmlTooltip>
           </span>
           <ToggleButtonGroup
             value={alignment}
@@ -144,6 +159,7 @@ export default function DonatePayment() {
           </ToggleButtonGroup>
           <FormControl component="fieldset">
             <RadioGroup
+              aria-label="Select price"
               row
               aria-label="position"
               name="position"
@@ -194,6 +210,7 @@ export default function DonatePayment() {
               </Grid>
               <Grid item xs={9} style={{ marginTop: "8%" }}>
                 <TextField
+                  aria-label="First Name"
                   style={{ marginRight: 40 }}
                   id="outlined-basic"
                   label="First Name"
@@ -201,6 +218,7 @@ export default function DonatePayment() {
                 />
 
                 <TextField
+                  aria-label="Last Name"
                   id="outlined-basic"
                   label="Last Name"
                   variant="outlined"
@@ -242,13 +260,20 @@ export default function DonatePayment() {
               </Grid>
               <Grid item xs={9} style={{ marginTop: "3%" }}>
                 <FormControl className={classes.formControl}>
-                  <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+                  <InputLabel
+                    aria-label="Select gender"
+                    id="demo-simple-select-label"
+                  >
+                    Gender
+                  </InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
                   >
-                    <MenuItem>Male</MenuItem>
-                    <MenuItem>Female</MenuItem>
+                    <MenuItem value={"Male"}>Male</MenuItem>
+                    <MenuItem value={"Female"}>Female</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
@@ -260,6 +285,7 @@ export default function DonatePayment() {
               </Grid>
               <Grid item xs={9} style={{ marginTop: "3%" }}>
                 <TextField
+                  aria-label="Please input year month then date"
                   id="date"
                   label="Birthday"
                   type="date"
@@ -382,6 +408,7 @@ export default function DonatePayment() {
             </Grid>
           </Grid>
           <Button
+            aria-label=" Donate Now Button"
             style={{
               marginTop: "5%",
               width: 400,

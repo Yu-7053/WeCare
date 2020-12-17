@@ -36,13 +36,17 @@ export default function AboutUsText() {
         </h1>
 
         <br></br>
-        <span style={{ fontSize: 20 }}>
+        <span aria-label="company history" style={{ fontSize: 20 }}>
           For the past 20 years we have been giving the children in Europe and
           other parts of the world opportunities to learn, access to healthcare,
           protection from harm and a healthy start to their lives.
         </span>
       </Grid>
-      <Grid container style={{ marginTop: "3%", marginLeft: "3%" }}>
+      <Grid
+        aria-label="Basic company information"
+        container
+        style={{ marginTop: "3%", marginLeft: "3%" }}
+      >
         <Grid
           item
           xs={3}

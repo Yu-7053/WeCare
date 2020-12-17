@@ -144,7 +144,7 @@ export default function SponsorCards(props) {
         Country: "Guatemala",
       },
       {
-        name: "Edson Ayubu",
+        name: "Edson Ayubi",
         image: "./Child/boy2.jpg",
         age: 12,
         ageGroup: "10-14",
@@ -487,7 +487,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen1}
             >
               <InfoIcon />
               Info
@@ -500,7 +500,7 @@ export default function SponsorCards(props) {
                 style={{ textAlign: "left", fontSize: "20px" }}
               >
                 <span>
-                  <b>Name</b> : Edson Ayubu
+                  <b>Name</b> : Edson Ayubi
                 </span>
                 <br></br>
                 <span>
@@ -542,7 +542,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen2}
             >
               <InfoIcon />
               Info
@@ -598,7 +598,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen3}
             >
               <InfoIcon />
               Info
@@ -654,7 +654,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen4}
             >
               <InfoIcon />
               Info
@@ -709,7 +709,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen5}
             >
               <InfoIcon />
               Info
@@ -765,7 +765,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen6}
             >
               <InfoIcon />
               Info
@@ -811,7 +811,7 @@ export default function SponsorCards(props) {
         {/*kids 8 */}
         <Grid item xs={4}>
           <Card>
-            <CardMedia component="img" height="250" image="./Child/boy5.jpg" />
+            <CardMedia component="img" height="250" image="./Child/boy5.jpeg" />
 
             <IconButton
               color="primary"
@@ -821,7 +821,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen7}
             >
               <InfoIcon />
               Info
@@ -876,7 +876,7 @@ export default function SponsorCards(props) {
                 width: "30px",
                 fontSize: "20px",
               }}
-              onClick={handleOpen}
+              onClick={handleOpen8}
             >
               <InfoIcon />
               Info
@@ -962,7 +962,17 @@ export default function SponsorCards(props) {
                   Details
                 </h2>
 
-                <p id="transition-modal-description">
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Melvin Ortencia is anxiously waiting for a sponsor.He needs
+                    support in order to have new opportunities so he could learn
+                    and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
                   <span>
                     <b>Name</b> : Melvin Ortencia
                   </span>
@@ -988,11 +998,15 @@ export default function SponsorCards(props) {
                   </span>
                   <br></br>
                   <span>
-                    <b>Enjoys</b> : Running, playing with dolls
+                    <b>Enjoys</b> : Running, swimming
                   </span>
                   <br></br>
                   <span>
                     <b>Talents</b> : Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
                   </span>
                 </p>
               </Grid>
@@ -1030,8 +1044,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Edson Ayubi is anxiously waiting for a sponsor.He needs
+                    support in order to have new opportunities so he could learn
+                    and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Edson Ayubi
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 12
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 300 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Tanzania
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 200 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Male
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Running, group games
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1068,8 +1126,53 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Austin Malaski is anxiously waiting for a sponsor.He needs
+                    support in order to have new opportunities so he could learn
+                    and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Austin Malaski
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 4
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 100 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Kosovo
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 210 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Male
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Playing with friends, Bicycling,playing
+                    outdoor games
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1106,8 +1209,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Eki Nolava is anxiously waiting for a sponsor.He needs
+                    support in order to have new opportunities so he could learn
+                    and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Eki Nolava
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 5
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 430 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Indonesia
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 150 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Male
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Playing soccer, playing with friends
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Drawing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Mother
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1144,8 +1291,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Souraya Paracana is anxiously waiting for a sponsor.She
+                    needs support in order to have new opportunities so she
+                    could learn and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Souraya Paracana
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 8
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 134 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Niger
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 169 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Female
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Playing with dolls, playing with friends
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Drawing,Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Father
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1182,8 +1373,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Harira Sapuna is anxiously waiting for a sponsor.She needs
+                    support in order to have new opportunities so she could
+                    learn and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Harira Sapuna
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 7
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 73 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Malawi
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 120 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Female
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Playing with dolls,
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Painting, Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1204,13 +1439,13 @@ export default function SponsorCards(props) {
           timeout: 500,
         }}
       >
-        <Fade in={open6} style={{ width: "80%", height: "50%" }}>
+        <Fade in={open6} style={{ width: "80%", height: "70%" }}>
           <div className={classes.paper}>
             <Grid container spacing={3}>
               <Grid item xs={6}>
                 <img
                   src="./Child/girl2.jpg"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "80%" }}
                 ></img>
               </Grid>
               <Grid item xs={6}>
@@ -1220,8 +1455,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Kabita Bhattarai is anxiously waiting for a sponsor.She
+                    needs support in order to have new opportunities so she
+                    could learn and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Kabita Bhattarai
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 12
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 190 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Nepal
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 201 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Female
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Playing with dolls,singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1247,7 +1526,7 @@ export default function SponsorCards(props) {
             <Grid container spacing={3}>
               <Grid item xs={6}>
                 <img
-                  src="./Child/boy5.jpg"
+                  src="./Child/boy5.jpeg"
                   style={{ width: "100%", height: "100%" }}
                 ></img>
               </Grid>
@@ -1258,8 +1537,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Albert Lare is anxiously waiting for a sponsor.He needs
+                    support in order to have new opportunities so he could learn
+                    and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Albert Lare
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 6
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 5 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Togo
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 200 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Male
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Playing soccer
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
+                  </span>
                 </p>
               </Grid>
             </Grid>
@@ -1296,8 +1619,52 @@ export default function SponsorCards(props) {
                 >
                   Details
                 </h2>
-                <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p
+                  id="transition-modal-description"
+                  style={{ fontSize: "20px" }}
+                >
+                  <span>
+                    Kyara Lopez is anxiously waiting for a sponsor.She needs
+                    support in order to have new opportunities so she could
+                    learn and grow spiritually,physically and mentally.
+                  </span>
+                  <br></br>
+                  <br></br>
+                  <span>
+                    <b>Name</b> : Kyara Lopez
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Age</b> : 5
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Waiting For Sponsorship</b> : 50 days
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Country</b> : Nicaragua
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Family Income</b> : 134 €
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Gender</b> : Female
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Enjoys</b> : Dolls,singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Talents</b> : Singing
+                  </span>
+                  <br></br>
+                  <span>
+                    <b>Lives with</b> : Parents
+                  </span>
                 </p>
               </Grid>
             </Grid>

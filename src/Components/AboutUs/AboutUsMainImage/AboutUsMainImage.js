@@ -7,6 +7,7 @@ import AboutUSImage from "../../../Images/AboutUs/discussion.jpeg";
 export default function AboutUsMainImage() {
   return (
     <div
+      aria-label="Company people image"
       style={{
         backgroundImage: `url(${AboutUSImage})`,
         height: "100%",

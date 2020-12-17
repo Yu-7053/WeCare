@@ -36,7 +36,11 @@ export default function OurVolunteers() {
           Our Volunteers
         </h1>
       </Grid>
-      <Grid container style={{ marginTop: "3%", marginLeft: "3%" }}>
+      <Grid
+        container
+        aria-label="Volunteer information"
+        style={{ marginTop: "3%", marginLeft: "3%" }}
+      >
         <Grid
           item
           xs={3}
