@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import "./Sponsornow.css";
 import GirlWithDog from "../../../Images/SponsorNow/girlwithdog.jpg";
 import Fab from "@material-ui/core/Fab";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,6 +58,10 @@ export default function Sponsornow() {
             order to reach their full potential. Be a sponsor and you can help
             change that.
           </p>
+          <Link
+          href="/sponsor-now"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <Fab
             variant="extended"
             style={{
@@ -68,6 +73,7 @@ export default function Sponsornow() {
           >
             Sponsor Now
           </Fab>
+          </Link>
         </Grid>
       </Grid>
     </div>

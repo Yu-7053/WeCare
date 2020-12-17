@@ -7,17 +7,20 @@ import Typography from "@material-ui/core/Typography";
 import HandsHeart from "../../../Images/HowHelp/HandsHeart.jpg";
 import LaughingBoy from "../../../Images/HowHelp/LaughingBoy.jpeg";
 import Volunteers from "../../../Images/HowHelp/Volunteers.jpeg";
+import Link from "@material-ui/core/Link";
 
 const images = [
   {
     url: HandsHeart,
     title: "HELP WITH YOUR DONATION",
     width: "33.3333333333333333333%",
+    Link : "/donate-now"
   },
   {
     url: LaughingBoy,
     title: "SPONSOR A CHILD",
     width: "33.3333333333333333333%",
+    Link : "/sponsor-now"
   },
   {
     url: Volunteers,
@@ -128,6 +131,7 @@ export default function HowHelp() {
         </Grid>
         <div className={classes.root} style={{ marginTop: 50 }}>
           {images.map((image) => (
+            
             <ButtonBase
               focusRipple
               key={image.title}
@@ -137,6 +141,7 @@ export default function HowHelp() {
                 width: image.width,
               }}
             >
+            <Link href={image.Link}>
               <span
                 className={classes.imageSrc}
                 style={{
@@ -155,7 +160,9 @@ export default function HowHelp() {
                   <span className={classes.imageMarked} />
                 </Typography>
               </span>
+              </Link>
             </ButtonBase>
+            
           ))}
         </div>
       </Grid>

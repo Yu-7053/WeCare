@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
 //import SloganImage from "../../../Images/children-306607_1280.jpg";
 import SloganImage from "../../../Images/LandingPageImage.jpg";
 
@@ -62,9 +63,14 @@ export default function Imageslogan() {
         }}
       >
         "Every childhood is worth fighting for"
-        <Fab variant="extended" style={{ marginLeft: "10%", color: "White" }}>
-          Donate Now
-        </Fab>
+        <Link
+          href="/donate-now"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <Fab variant="extended" style={{ marginLeft: "10%", color: "White" }}>
+            Donate Now
+          </Fab>
+        </Link>
       </Grid>
     </div>
   );

@@ -156,7 +156,7 @@ export default function Header() {
                         onKeyDown={handleListKeyDown}
                       >
                         <Link
-                          href="/about-us"
+                          href="/donate-now"
                           style={{ textDecoration: "none", color: "black" }}
                         >
                           <MenuItem onClick={handleClose}>Donate</MenuItem>
@@ -179,7 +179,7 @@ export default function Header() {
               )}
             </Popper>
             <Link
-              href="/Test"
+              href="#"
               className={classes.menuItem}
               style={{ fontWeight: "bold" }}
             >

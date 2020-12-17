@@ -12,11 +12,11 @@ export default function ThankYou() {
     }, 5000);
   }, []);
 
-  React.useEffect(() => {
+  {/*React.useEffect(() => {
     const timer =
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
     return () => clearInterval(timer);
-  }, [counter]);
+  }, [counter]);*/}
 
   return (
     <div>
@@ -34,11 +34,11 @@ export default function ThankYou() {
           </h1>
         </Grid>
 
-        <Grid item xs={12} style={{ marginTop: "5%" }}>
+        {/*<Grid item xs={12} style={{ marginTop: "5%" }}>
           <h1 style={{ color: "white", fontSize: 50 }}>
             Back to Home Page in : {counter}
           </h1>
-        </Grid>
+        </Grid>*/}
       </Grid>
     </div>
   );
