@@ -73,6 +73,7 @@ export default function DonatePayment() {
   const [price, setPrice] = React.useState("");
   const [selectedPrice, setSelectedPrice] = React.useState();
   const [gender, setGender] = React.useState("");
+  const [country, setCountry] = React.useState("");
 
   const [Monthly, setMonthly] = React.useState(false);
 
@@ -359,13 +360,15 @@ export default function DonatePayment() {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
                 >
-                  <MenuItem>Afghanistan</MenuItem>
-                  <MenuItem>Albania</MenuItem>
-                  <MenuItem>Algeria</MenuItem>
-                  <MenuItem>Andorra</MenuItem>
-                  <MenuItem>Angola</MenuItem>
-                  <MenuItem>Antigua & Deps</MenuItem>
+                  <MenuItem value={"USA"}>USA</MenuItem>
+                  <MenuItem value={"Germany"}>Germany</MenuItem>
+                  <MenuItem value={"Algeria"}>Algeria</MenuItem>
+                  <MenuItem value={"Andorra"}>Andorra</MenuItem>
+                  <MenuItem value={"Angola"}>Angola</MenuItem>
+                  <MenuItem value={"Africa"}>Africa</MenuItem>
                 </Select>
               </FormControl>
             </Grid>

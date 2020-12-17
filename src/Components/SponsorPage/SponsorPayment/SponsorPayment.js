@@ -125,6 +125,7 @@ export default function SponsorPayment() {
   const [success1, setSuccess1] = React.useState(false);
   const [success2, setSuccess2] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
+  const [country, setCountry] = React.useState("");
 
   const checkedChange = () => {
     setChecked(!checked);
@@ -431,13 +432,15 @@ export default function SponsorPayment() {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
                 >
-                  <MenuItem>Afghanistan</MenuItem>
-                  <MenuItem>Albania</MenuItem>
-                  <MenuItem>Algeria</MenuItem>
-                  <MenuItem>Andorra</MenuItem>
-                  <MenuItem>Angola</MenuItem>
-                  <MenuItem>Antigua & Deps</MenuItem>
+                  <MenuItem value={"USA"}>USA</MenuItem>
+                  <MenuItem value={"Germany"}>Germany</MenuItem>
+                  <MenuItem value={"Algeria"}>Algeria</MenuItem>
+                  <MenuItem value={"India"}>Andorra</MenuItem>
+                  <MenuItem value={"Angola"}>Angola</MenuItem>
+                  <MenuItem value={"Africa"}>Africa</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
