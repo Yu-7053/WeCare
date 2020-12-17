@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Tabs from "@material-ui/core/Tabs";
@@ -108,6 +108,15 @@ function StyledCheckbox(props) {
     />
   );
 }
+const HtmlTooltip = withStyles((theme) => ({
+  tooltip: {
+    backgroundColor: "#f5f5f9",
+    color: "rgba(0, 0, 0, 0.87)",
+    maxWidth: 500,
+    fontSize: "15px",
+    border: "1px solid #dadde9",
+  },
+}))(Tooltip);
 
 export default function SponsorPayment() {
   const classes = useStyles();
@@ -230,7 +239,7 @@ export default function SponsorPayment() {
             }}
           >
             Select Duration
-            <Tooltip
+            <HtmlTooltip
               title="Donate Monthly implies a recurring monthly payment. To cancel please inform us via email or contact us at 1-800-888-3089
 "
               style={{ marginRight: "40%", marginButtom: "-10%" }}
@@ -238,7 +247,7 @@ export default function SponsorPayment() {
               <IconButton aria-label="delete">
                 <InfoIcon />
               </IconButton>
-            </Tooltip>
+            </HtmlTooltip>
           </span>
           <br></br>
           <br></br>
