@@ -345,8 +345,8 @@ export default function SponsorPayment() {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                   >
-                    <MenuItem>Male</MenuItem>
-                    <MenuItem>Female</MenuItem>
+                    <MenuItem value={"Male"}>Male</MenuItem>
+                    <MenuItem value={"Female"}>Female</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
