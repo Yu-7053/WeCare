@@ -254,7 +254,7 @@ export default function SponsorPayment() {
           <br></br>
           <br></br>
           <span style={{ fontSize: 30, marginRight: "65%" }}>
-            Amount : 25 $
+            Amount : € 25 
           </span>
           <ButtonGroup
             variant="contained"
