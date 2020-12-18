@@ -8,7 +8,7 @@ export default function OurMission() {
       <Grid xs={12} style={{ marginLeft: 80, marginRight: 80 }}>
         <br></br>
         <br></br>
-
+        <img src={OurMissionIcon} style={{ height: "90px", width: "90px" }} />
         <p
           style={{
             fontWeight: "bold",
